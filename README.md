@@ -82,4 +82,57 @@ Future Improvements
 	•	Enhance the UI with custom animations and transitions.
 	•	Improve error handling and display error messages to the user.
 
+
+# Books Database Application 📚
+
+This is a Spring Boot application for managing a database of books, built with Java, Maven, and PostgreSQL. The application is containerized using Docker and Docker Compose for easy deployment and scaling.
+
+Features
+
+	•	RESTful APIs: Manage books with endpoints for CRUD operations.
+	•	PostgreSQL Integration: A relational database for storing book data.
+	•	Dockerized Deployment: Simplified setup with Docker and Docker Compose.
+	•	Configuration with Spring: Easy database configuration via environment variables.
+
+Getting Started
+
+Prerequisites
+
+	•	Docker and Docker Compose installed on your system.
+
+Steps to Run the Application
+
+	1.	Clone the repository:
+
+
+	2.	Build and start the application:
+
+docker-compose up --build
+
+
+	3.	Access the application:
+	•	Backend: The Spring Boot app runs on http://127.0.0.1:8080.
+	•	Database: PostgreSQL is exposed on port 5432.
+
+Project Structure
+
+	•	Docker Compose: Orchestrates the app and database containers.
+	•	Dockerfile: Multi-stage build to create a lightweight image for the app.
+	•	PostgreSQL Database: Configured with environment variables.
+	•	Spring Boot: Handles application logic and API endpoints.
+
+Configuration
+
+Environment variables in docker-compose.yml control database connectivity:
+
+	•	SPRING_DATASOURCE_URL: JDBC URL for PostgreSQL.
+	•	SPRING_DATASOURCE_USERNAME: Database username.
+	•	SPRING_DATASOURCE_PASSWORD: Database password.
+
+Future Improvements
+
+	•	Add API documentation (e.g., Swagger).
+	•	Implement unit and integration tests.
+	•	Add CI/CD pipeline for automated deployment.
+
 Feel free to contribute to the project by submitting issues or pull requests! 😊
